@@ -10,7 +10,7 @@ about:
     - icon: linkedin
     - text: LinkedIn
       href: https://www.linkedin.com/in/kai-they-them-morquecho-2a86a7185/
-      target: _blank ## this makes it so that when you click on linkedin, it opens a new tab
+      target: _blank
     - text: Github
       icon: github
       href: https://github.com/kaimorquecho
