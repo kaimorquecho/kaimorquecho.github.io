@@ -1,0 +1,23 @@
+---
+title: "blog post title"
+description: "a short description, catchy"
+author:
+  - name: Kaiju Rubalcava
+    affiliation: MEDS
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds-program
+date: 2024-10-18
+categories: [Quarto, MEDS, something-cool]
+bibliography: references.bib
+---
+
+## This is my first section
+
+I'm going to insert a footnote here [^1]
+
+[^1]: Here is a new footnote
+
+## This is my second 
+
+Here's my next paragraph^[here is my second footnote] 
+
+I'm citing me[@csik2022]
