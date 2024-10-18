@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Kaiju Morquecho",
@@ -7,10 +14,10 @@
     "text": "Kaiju Morquecho graduated from the University of California, Santa Barbara, in 2021 with a Bachelor of Arts degree in Environmental Studies. During their undergraduate career, Kaiju studied food justice and land sovereignty, inspired by their grandparents’ land stewardship history and the food insecurity they experienced as an Indigenous Mexican immigrant. They served as the Co-Chair of UC Santa Barbara’s Environmental Justice Alliance, where they used the $35,000 budget to engage the UCSB community through workshops, speaker events, and sponsored scholarships for undocumented students interested in environmental justice. Under the supervision of UCSB’s food and farming professor and mentor Liz Carlisle, they created an artistic thesis about the direct relationship between colonialism, capitalism, and food injustice. They also worked as a restoration intern for the Cheadle Center for Biodiversity and Ecological Restoration and as a summer research assistant to Bren PhD student Jason Maier, immersing themselves in Python without prior experience to analyze Food and Agriculture Organization data. After completing the MEDS program, Kaiju is committed to upholding the pillars of Indigenous data sovereignty and applying data science skills to solve problems that plague the food supply chain and perpetuate food and land injustice."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "delete_later/practice.html",
+    "href": "delete_later/practice.html",
+    "title": "Here is my level one header",
     "section": "",
-    "text": "About this site"
+    "text": "Here is my level one header\nHere is my first paragraph\nHere is my second paragraph, where you can read more about MEDS.\nThis is very important text!"
   }
 ]

@@ -1,0 +1,41 @@
+/*-- scss:defaults --*/
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// Create font variables
+$quicksand: "Quicksand", sans-serif;
+
+// Colors
+
+$indian-red: #CA535D;
+$uranian-blue: #A6D9F7;
+$maize: #FDE74C;
+$tea-green: #DEEFB7;
+$eerie-black: #1E1B18;
+
+// Quarto Sass Variables
+$navbar-bg: $eerie-black;
+$navbar-fg: $maize;
+$navbar-hl: $tea-green;
+$body-bg: $indian-red;
+$body-color: $uranian-blue;
+$footer-bg: $eerie-black;
+$link-color: $tea-green;
+
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: $quicksand;
+}
+
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+
+
+
+

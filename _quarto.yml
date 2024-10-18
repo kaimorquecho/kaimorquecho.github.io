@@ -4,17 +4,20 @@ project:
 website:
   title: "Kaiju Morquecho"
   navbar:
-    left:
+    title: false
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
       - href: resources.qmd
         text: Resources
+  page-footer:
+    background: light 
+    left: Copyright 2024, Kaiju Morquecho
+    right: This website is built with {{< fa brands github title="the octocat github icon">}}
 format:
   html:
-    theme:
-      light: minty
-      dark: solar
-    css: styles.css
-    toc: true
+    theme: styles.scss
+    mainfont: Bebas Neue
+    toc: false
     page-layout: full
