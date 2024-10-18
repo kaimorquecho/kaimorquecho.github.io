@@ -8,6 +8,12 @@ author:
 date: 2024-10-18
 categories: [Quarto, MEDS, something-cool]
 bibliography: references.bib
+csl: plos-computational-biology.csl
+image: snek.png
+citation:
+  url: https://kaimorquecho.github.io/posts/2024-10-18-my-first-post/
+draft: TRUE
+draft-mode: visible 
 ---
 
 ## This is my first section
@@ -21,3 +27,15 @@ I'm going to insert a footnote here [^1]
 Here's my next paragraph^[here is my second footnote] 
 
 I'm citing me[@csik2022]
+
+```{r, warning = FALSE}
+#| echo: false
+library(palmerpenguins)
+library(tidyverse)
+
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point()
+```
+

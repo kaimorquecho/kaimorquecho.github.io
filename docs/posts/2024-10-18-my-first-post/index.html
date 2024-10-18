@@ -27,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -91,6 +90,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<meta name="quarto:status" content="draft">
 
 
 </head>
@@ -98,7 +98,7 @@ div.csl-indent {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
@@ -195,16 +195,37 @@ div.csl-indent {
 <section id="this-is-my-second" class="level2">
 <h2 class="anchored" data-anchor-id="this-is-my-second">This is my second</h2>
 <p>Here’s my next paragraph<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>I’m citing me<span class="citation" data-cites="csik2022">(<a href="#ref-csik2022" role="doc-biblioref">Csik 2022</a>)</span></p>
+<p>I’m citing me<span class="citation" data-cites="csik2022">[<a href="#ref-csik2022" role="doc-biblioref">1</a>]</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-csik2022" class="csl-entry" role="listitem">
-Csik, Samantha. 2022. <span>“Adding a Blog to Your Existing <span>Quarto</span> Website.”</span> October 24, 2022. <a href="https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/">https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/</a>.
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Csik S. Adding a Blog to Your Existing <span>Quarto</span> Website. 24 Oct 2022. Available: <a href="https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/">https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/</a></div>
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
@@ -212,7 +233,17 @@ Csik, Samantha. 2022. <span>“Adding a Blog to Your Existing <span>Quarto</span
 <li id="fn1"><p>Here is a new footnote<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>here is my second footnote<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{rubalcava2024,
+  author = {Rubalcava, Kaiju},
+  title = {Blog Post Title},
+  date = {2024-10-18},
+  url = {https://kaimorquecho.github.io/posts/2024-10-18-my-first-post/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-rubalcava2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="">Rubalcava K. blog post title. 18 Oct 2024.
+Available: <a href="https://kaimorquecho.github.io/posts/2024-10-18-my-first-post/">https://kaimorquecho.github.io/posts/2024-10-18-my-first-post/</a></div>
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
