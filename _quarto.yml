@@ -4,7 +4,8 @@ project:
 website:
   title: "Kaiju Morquecho"
   navbar:
-    title: false
+    #title: true
+    logo: lochie.png
     right:
       - href: index.qmd
         text: Home
@@ -19,6 +20,6 @@ website:
 format:
   html:
     theme: styles.scss
-    mainfont: Bebas Neue
+    mainfont: Courier Prime
     toc: false
     page-layout: full
