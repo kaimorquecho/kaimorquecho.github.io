@@ -123,11 +123,11 @@ My analysis plan showed that the data did not meet the assumptions of an OLS mod
 
 The fitted model clearly exhibits omitted variable bias, though that does not come as a surprise given the size and characteristics of the dataset. An OLS model was most definitely not the right fit for the dataset, or at the very least, not the right fit for the predictors I chose.
 
-Even so, the results of my analysis help me answer my question because it helped me understand at least some of the mechanisms and relationships in the data. It also helped me identify areas for improvement and new directions to go in if I choose to further pursue an answer to my question.
+Even so, the results of my analysis help me answer my question. After exploring, cleaning, and analysing the data I have a better understanding of at least some of the mechanisms and relationships in the data. In fact, failing to fit an OLS model to the data helps me identify areas for improvement and new directions to go in if I choose to further pursue an answer to my question.
 
 # Future steps
 
-Future steps would include expanding the scope of the dataset - more variables are necessary in order to reach any solid conclusion on the challenges and systemic obstacles faced by female-identifying heads of households. Just to mention a few:
+Future steps would include expanding the scope of the dataset - more variables are necessary in order to reach any solid conclusion on the challenges and systemic obstacles faced by female-identifying heads of households. After this exersise I doubt that any model that I attempt to fit would confidently and robustly explain the mechanisms of the data / answer the research question. Just to mention a few possible next steps:
 
 -   It would be helpful to incorporate the cost of living and data on the CA housing market by region
 
