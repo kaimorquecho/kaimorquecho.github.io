@@ -119,11 +119,9 @@ What at a glance seemed like a great model fit is actually quite the opposite.
 
 # Concluding thoughts
 
-My analysis plan showed that the data did not meet the conditions required for an OLS model to fit - after plotting the residuals it is clear that there is no homoscedasticity in at least one of the data variables. It is also clear that there are non-linear relationships between predictors and the dependent variable.
+My analysis plan showed that the data did not meet the assumptions of an OLS model - after plotting the residuals it is clear that there is no homoscedasticity in at least one of the predictors. There may also be multi-collinearity between predictors. It is also clear that there are non-linear relationships between predictors and the dependent variable.
 
-The fitted model clearly exhibits omitted variable bias, though that does not come as a surprise given the size and characteristics of the dataset. There must be other predictors and interactions at play in the data
-
-An OLS model was most definitely not the right fit for the dataset, or at the very least, not the right fit for the predictors I chose.
+The fitted model clearly exhibits omitted variable bias, though that does not come as a surprise given the size and characteristics of the dataset. An OLS model was most definitely not the right fit for the dataset, or at the very least, not the right fit for the predictors I chose.
 
 Even so, the results of my analysis help me answer my question because it helped me understand at least some of the mechanisms and relationships in the data. It also helped me identify areas for improvement and new directions to go in if I choose to further pursue an answer to my question.
 
@@ -131,17 +129,17 @@ Even so, the results of my analysis help me answer my question because it helped
 
 Future steps would include expanding the scope of the dataset - more variables are necessary in order to reach any solid conclusion on the challenges and systemic obstacles faced by female-identifying heads of households. Just to mention a few:
 
--   It would be helpful to incorporate the cost of living and the housing market of CA regions into the dataset
+-   It would be helpful to incorporate the cost of living and data on the CA housing market by region
 
 -   Comparing this data to that of male-identifying heads of households
 
 -   Expanding the scope of the data to other gender identities
 
--   Including race in future analysis
+-   Including race in future analysis. We know that environmental issues almost always disproportionately affect populations of color
 
 -   Explore a better fitting model type, not a linear model
 
--   Account for the fact that significant social, political, or environmental events in any given year have an impact on the cost of food
+-   Account for the fact that significant social, political, or environmental events in any given year have an impact on the cost of food.
 
 -   Research and explore social and economic patterns within CA regions
 
