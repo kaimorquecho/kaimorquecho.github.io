@@ -23,27 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -277,7 +257,7 @@ div.csl-indent {
 <p><strong>The resulting p-value of every single randomization test was 0 or virtually 0, giving me strong evidence to reject the null hypothesis. Under the assumption that the null is true, it is very unlikely that the observed food cost data would occur by chance and without the effect of region.</strong></p>
 <p><strong><em>Fit an OLS Model (or two.. )</em></strong></p>
 <ul>
-<li>To try to understand what the actual effect of region is on food cost in our data, I decided to fit an OLS model to my data</li>
+<li>After confirming that there is in fact a relationship between region and food cost, it is time to understand what the actual effect of region is on food cost in our data, I decided to fit an OLS model to my data</li>
 </ul>
 <section id="cost_lm---lmcost_yr-region_name-ave_fam_size-log_income-data-food" class="level4">
 <h4 class="anchored" data-anchor-id="cost_lm---lmcost_yr-region_name-ave_fam_size-log_income-data-food"><strong>cost_lm &lt;- lm(cost_yr ~ region_name + ave_fam_size + log_income, data = food)</strong></h4>
@@ -286,29 +266,84 @@ div.csl-indent {
 <p><img src="images/cost_lm_sum.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
 </figure>
 </div>
+<ul>
+<li><p>So far so good, right? The coefficients of my model tell us that:</p>
+<ul>
+<li><p><u><strong>Region</strong></u> has a small effect on food cost in the Southern and Superior CA regions, compared to our baseline (Bay Area). However, living in Los Angeles significantly impacts the cost of food (by increasing it)</p></li>
+<li><p><u><strong>Average family size</strong></u>is, logically, a strong predictor of food cost - the larger the family, the greater the expenditures on food.</p></li>
+<li><p><u><strong>Median income</strong></u> is, also logically, a strong predictor of food cost - the higher the income, the higher the expenditures on food</p></li>
+</ul></li>
+<li><p>Not only are the coefficients are significant, but the <u><strong>R squared</strong></u> of the model is high, telling us that the model accounts for a great portion of the variability in food costs. Furthermore, the <u><strong>p-value</strong></u> indicates that at least one of my predictors is significantly affecting the cost of food.</p></li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/rsq.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="430"></p>
+<p><img src="images/rsq-01.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="430"></p>
 </figure>
 </div>
-<p>Here’s my next footnote<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>I’m citing me<span class="citation" data-cites="csik2022">(<a href="#ref-csik2022" role="doc-biblioref">Csik 2022</a>)</span></p>
-
-
-
 </section>
 </section>
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-csik2022" class="csl-entry" role="listitem">
-Csik, Samantha. 2022. <span>“Adding a Blog to Your Existing <span>Quarto</span> Website.”</span> October 24, 2022. <a href="https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/">https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/</a>.
+<section id="not-so-fast" class="level1">
+<h1>Not so fast!</h1>
+<p>Like I said in the beginning of this blog, no environmental issue is simple.</p>
+<p><strong><em>Let’s see what the residuals of my model have to say for themselves …</em></strong></p>
+<p>What at a glance seemed like a great model fit is actually quite the opposite.</p>
+<ul>
+<li>First, I plotted the fitted values vs.&nbsp;the observed food cost values. The plot showed that my model was, in fact, not a great fit.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fitted_obs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
 </div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ul>
+<li><p>Although the points seem to follow the direction of the lm line, they fall within a specific range, indicating that my model is either omitting one or more significant variables/interactions, or it is not flexible enough to fit the data outside of a certain range.</p></li>
+<li><p>To investigate further, I decided to plot the residuals of my model vs.&nbsp;food cost by region. I wondered if my model could predict food cost accurately for some regions.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/region_res.png" class="img-fluid figure-img"></p>
+<figcaption>Residuals vs food cost by region</figcaption>
+</figure>
+</div>
+<ul>
+<li>Plotting the residuals further confirmed that the model, in fact, is not a good fit. Regardless of region, the residuals did not exhibit a random distribution. In fact, they seem to indicate a “C” shaped pattern, regardless of region.</li>
+</ul>
+</section>
+<section id="concluding-thoughts" class="level1">
+<h1>Concluding thoughts</h1>
+<p>My analysis plan showed that the data did not meet the conditions required for an OLS model to fit - after plotting the residuals it is clear that there is no homoscedasticity in at least one of the data variables. It is also clear that there are non-linear relationships between predictors and the dependent variable.</p>
+<p>The fitted model clearly exhibits omitted variable bias, though that does not come as a surprise given the size and characteristics of the dataset. There must be other predictors and interactions at play in the data</p>
+<p>An OLS model was most definitely not the right fit for the dataset, or at the very least, not the right fit for the predictors I chose.</p>
+<p>Even so, the results of my analysis help me answer my question because it helped me understand at least some of the mechanisms and relationships in the data. It also helped me identify areas for improvement and new directions to go in if I choose to further pursue an answer to my question.</p>
+</section>
+<section id="future-steps" class="level1">
+<h1>Future steps</h1>
+<p>Future steps would include expanding the scope of the dataset - more variables are necessary in order to reach any solid conclusion on the challenges and systemic obstacles faced by female-identifying heads of households. Just to mention a few:</p>
+<ul>
+<li><p>It would be helpful to incorporate the cost of living and the housing market of CA regions into the dataset</p></li>
+<li><p>Comparing this data to that of male-identifying heads of households</p></li>
+<li><p>Expanding the scope of the data to other gender identities</p></li>
+<li><p>Including race in future analysis</p></li>
+<li><p>Explore a better fitting model type, not a linear model</p></li>
+<li><p>Account for the fact that significant social, political, or environmental events in any given year have an impact on the cost of food</p></li>
+<li><p>Research and explore social and economic patterns within CA regions</p></li>
+</ul>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p><a href="https://data.ca.gov/dataset/food-affordability">California Open Data Portal</a></p>
+<p><a href="https://census.ca.gov/regions/">California Counties and Regions</a></p>
+<p><a href="https://www.fns.usda.gov/pd/overview">Food and Nutrition Service, U.S Department of Agriculture</a></p>
+<p><a href="https://github.com/kaimorquecho/eds_222_finalproject.git">Github Repository for this project</a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p><a href="https://en.www.inegi.org.mx/programas/endiseg/2021/">INEGI ENDISEG</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>here is my second footnote<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{morquecho_rubalcava2024,
   author = {Morquecho Rubalcava, Kaiju},

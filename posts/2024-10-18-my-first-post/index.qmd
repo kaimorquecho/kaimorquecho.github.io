@@ -6,7 +6,6 @@ author:
     affiliation: MEDS Graduate Student
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds-program
 date: 2024-12-13
-bibliography: references.bib
 image: sketches.jpeg
 citation:
   url: https://kaimorquecho.github.io/posts/2024-10-18-my-first-post/
@@ -80,16 +79,78 @@ If you are interested in exploring Mexico's first gender non-conforming census s
 
 ***Fit an OLS Model (or two.. )***
 
--   To try to understand what the actual effect of region is on food cost in our data, I decided to fit an OLS model to my data
+-   After confirming that there is in fact a relationship between region and food cost, it is time to understand what the actual effect of region is on food cost in our data, I decided to fit an OLS model to my data
 
 #### **cost_lm \<- lm(cost_yr \~ region_name + ave_fam_size + log_income, data = food)**
 
 ![](images/cost_lm_sum.png){fig-align="center" width="1000"}
 
-![](images/rsq.png){fig-align="center" width="430"}
+-   So far so good, right? The coefficients of my model tell us that:
 
-Here's my next footnote[^2]
+    -   [**Region**]{.underline} has a small effect on food cost in the Southern and Superior CA regions, compared to our baseline (Bay Area). However, living in Los Angeles significantly impacts the cost of food (by increasing it)
 
-[^2]: here is my second footnote
+    -   [**Average family size**]{.underline}is, logically, a strong predictor of food cost - the larger the family, the greater the expenditures on food.
 
-I'm citing me[@csik2022]
+    -   [**Median income**]{.underline} is, also logically, a strong predictor of food cost - the higher the income, the higher the expenditures on food
+
+-   Not only are the coefficients are significant, but the [**R squared**]{.underline} of the model is high, telling us that the model accounts for a great portion of the variability in food costs. Furthermore, the [**p-value**]{.underline} indicates that at least one of my predictors is significantly affecting the cost of food.
+
+![](images/rsq-01.png){fig-align="center" width="430"}
+
+# Not so fast! 
+
+Like I said in the beginning of this blog, no environmental issue is simple.
+
+***Let's see what the residuals of my model have to say for themselves ...***
+
+What at a glance seemed like a great model fit is actually quite the opposite.
+
+-   First, I plotted the fitted values vs. the observed food cost values. The plot showed that my model was, in fact, not a great fit.
+
+![](images/fitted_obs.png){fig-align="center" width="1000"}
+
+-   Although the points seem to follow the direction of the lm line, they fall within a specific range, indicating that my model is either omitting one or more significant variables/interactions, or it is not flexible enough to fit the data outside of a certain range.
+
+-   To investigate further, I decided to plot the residuals of my model vs. food cost by region. I wondered if my model could predict food cost accurately for some regions.
+
+![Residuals vs food cost by region](images/region_res.png){fig-align="center"}
+
+-   Plotting the residuals further confirmed that the model, in fact, is not a good fit. Regardless of region, the residuals did not exhibit a random distribution. In fact, they seem to indicate a "C" shaped pattern, regardless of region.
+
+# Concluding thoughts
+
+My analysis plan showed that the data did not meet the conditions required for an OLS model to fit - after plotting the residuals it is clear that there is no homoscedasticity in at least one of the data variables. It is also clear that there are non-linear relationships between predictors and the dependent variable.
+
+The fitted model clearly exhibits omitted variable bias, though that does not come as a surprise given the size and characteristics of the dataset. There must be other predictors and interactions at play in the data
+
+An OLS model was most definitely not the right fit for the dataset, or at the very least, not the right fit for the predictors I chose.
+
+Even so, the results of my analysis help me answer my question because it helped me understand at least some of the mechanisms and relationships in the data. It also helped me identify areas for improvement and new directions to go in if I choose to further pursue an answer to my question.
+
+# Future steps
+
+Future steps would include expanding the scope of the dataset - more variables are necessary in order to reach any solid conclusion on the challenges and systemic obstacles faced by female-identifying heads of households. Just to mention a few:
+
+-   It would be helpful to incorporate the cost of living and the housing market of CA regions into the dataset
+
+-   Comparing this data to that of male-identifying heads of households
+
+-   Expanding the scope of the data to other gender identities
+
+-   Including race in future analysis
+
+-   Explore a better fitting model type, not a linear model
+
+-   Account for the fact that significant social, political, or environmental events in any given year have an impact on the cost of food
+
+-   Research and explore social and economic patterns within CA regions
+
+# References
+
+[California Open Data Portal](https://data.ca.gov/dataset/food-affordability)
+
+[California Counties and Regions](https://census.ca.gov/regions/)
+
+[Food and Nutrition Service, U.S Department of Agriculture](https://www.fns.usda.gov/pd/overview)
+
+[Github Repository for this project](https://github.com/kaimorquecho/eds_222_finalproject.git)
