@@ -24,31 +24,72 @@ If you are interested in exploring Mexico's first gender non-conforming census s
 
 [^1]: [INEGI ENDISEG](https://en.www.inegi.org.mx/programas/endiseg/2021/)
 
-## Now, let's dive into the data!
+# Now, let's dive into the data!
 
-##### *Data description*
+##### ***Data description***
 
 -   The data set was created by the U.S Department of Public Health, using data from:
 
-    -   U.S Census Bureau's American Community Survey (CA households and family data, and median income data)\[\]
+    -   U.S Census Bureau's American Community Survey (CA households and family data, and median income data)
 
     -   U.S Department of Agriculture's Economic Research Reserve (annual food cost data)
 
     -   Office of Health Equity's Healthy Communities Data and Indicators Project (food affordability ratio)
 
-Here's my next paragraph[^2]
+-   Data from 2006 - 2010 in California
+
+##### ***Data cleaning and data exploration***
+
+-   [Exploration]{.underline}
+
+    -   Visualize distribution of median income (median_income), log-transformed median income(log_income), food cost (cost_yr)
+
+![To understand the right-skewed distribution of the median income data](images/hist_median.png){fig-align="center" width="800"}
+
+![To check if taking log produced desired effect](images/inc_log.png){fig-align="center" width="800"}
+
+![To check if data needs transformation](images/food_cost.png){fig-align="center" width="800"}
+
+![](images/average_region.png){fig-align="center" width="800"}
+
+-   [Cleaning]{.underline}
+
+    -   Drop all NAs for median_income. All rows missing data for median_income were also missing cost_yr data. Both of these variables were crucial for my model down the line
+
+    -   Filter median_income to values less than \$120,000 and took the log
+
+    -   Drop the region_name column to replace it with a new region_name column consisting of 5 different regions, instead of the original 15 regions in the data designated by the Metropolitan Planning Organizations (MPO)
+
+        -   This will be useful down the line when trying to fit an lm model to the data
+
+# Analysis Plan
+
+-   ***Randomization Hypothesis Test***
+
+    -   I conducted a randomization hypothesis test first because I wanted to avoid diving deeper into the relationship between CA region and food cost if there wasn't one to explore in the first place
+
+        -   Null Hypothesis (H0): Region does not have a significant effect on food cost.
+
+        -   Alternative Hypothesis (H1): Region does have a significant effect on food cost.
+
+    -   I repeated the randomization test for 4 different pairs of regions to ascertain that the relationship between food cost and region existed for all 5 regions, not just one.
+
+![Null distribution of regions 3&4](images/null_dist.png){fig-align="center" width="800"}
+
+**The resulting p-value of every single randomization test was 0 or virtually 0, giving me strong evidence to reject the null hypothesis. Under the assumption that the null is true, it is very unlikely that the observed food cost data would occur by chance and without the effect of region.**
+
+***Fit an OLS Model (or two.. )***
+
+-   To try to understand what the actual effect of region is on food cost in our data, I decided to fit an OLS model to my data
+
+#### **cost_lm \<- lm(cost_yr \~ region_name + ave_fam_size + log_income, data = food)**
+
+![](images/cost_lm_sum.png){fig-align="center" width="1000"}
+
+![](images/rsq.png){fig-align="center" width="430"}
+
+Here's my next footnote[^2]
 
 [^2]: here is my second footnote
 
 I'm citing me[@csik2022]
-
-```{r, warning = FALSE}
-#| echo: false
-library(palmerpenguins)
-library(tidyverse)
-
-ggplot(penguins,
-       aes(x = bill_length_mm,
-           y = bill_depth_mm)) +
-  geom_point()
-```
