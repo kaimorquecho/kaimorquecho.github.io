@@ -1,6 +1,6 @@
 ---
 title: "Kaiju Morquecho"
-image: kaiju.JPG
+image: kaiju.png
 toc: false
 about: 
   template: jolla

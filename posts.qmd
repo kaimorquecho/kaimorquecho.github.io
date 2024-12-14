@@ -5,6 +5,7 @@ listing:
   type: grid
   sort: "date desc"
   categories: true
+categories: [Projects, Other]
   
 
 ---

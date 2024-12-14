@@ -14,6 +14,8 @@ draft: FALSE
 draft-mode: visible 
 ---
 
+
+
 ## *Why food affordability?*
 
 My initial project proposal sought to investigate the correlations between food insecurity and gender identity in Mexico using INEGI data. However, the datasets of interest were virtually impossible to join based on geography. Furthermore, the datasets available to download were limited to certain years and only certain sections of the surveys of my interest (ENSANUT and ENDISEG).
@@ -42,13 +44,29 @@ Here's my next paragraph[^2]
 
 I'm citing me[@csik2022]
 
-```{r, warning = FALSE}
-#| echo: false
-library(palmerpenguins)
-library(tidyverse)
 
-ggplot(penguins,
-       aes(x = bill_length_mm,
-           y = bill_depth_mm)) +
-  geom_point()
+
+::: {.cell}
+::: {.cell-output .cell-output-stderr}
+
 ```
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+```
+
+
+:::
+
+::: {.cell-output-display}
+![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}
+:::
+:::
+
