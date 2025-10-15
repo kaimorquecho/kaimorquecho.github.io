@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Here is where I describe what I do profesisonally"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Kaiju Morquecho",
+    "title": "Kaiju Morquecho Rubalcava",
     "section": "",
-    "text": "Kaiju Morquecho graduated from the University of California, Santa Barbara, in 2021 with a Bachelor of Arts degree in Environmental Studies. During their undergraduate career, Kaiju studied food justice and land sovereignty, inspired by their grandparents’ land stewardship history and the food insecurity they experienced as an Indigenous Mexican immigrant. They served as the Co-Chair of UC Santa Barbara’s Environmental Justice Alliance, where they used the $35,000 budget to engage the UCSB community through workshops, speaker events, and sponsored scholarships for undocumented students interested in environmental justice. Under the supervision of UCSB’s food and farming professor and mentor Liz Carlisle, they created an artistic thesis about the direct relationship between colonialism, capitalism, and food injustice. They also worked as a restoration intern for the Cheadle Center for Biodiversity and Ecological Restoration and as a summer research assistant to Bren PhD student Jason Maier, immersing themselves in Python without prior experience to analyze Food and Agriculture Organization data. After completing the MEDS program, Kaiju is committed to upholding the pillars of Indigenous data sovereignty and applying data science skills to solve problems that plague the food supply chain and perpetuate food and land injustice."
+    "text": "Kaiju Morquecho Rubalcava graduated from the University of California, Santa Barbara, in 2021 with a Bachelor of Arts degree in Environmental Studies. During their undergraduate career, Kaiju studied food justice and land sovereignty, inspired by their grandparents’ land stewardship history and the food insecurity they experienced as an Indigenous Mexican immigrant. They served as the Co-Chair of UC Santa Barbara’s Environmental Justice Alliance, where they used the $35,000 budget to engage the UCSB community through workshops, speaker events, and sponsored scholarships for undocumented students interested in environmental justice. Under the supervision of UCSB’s food and farming professor and mentor Liz Carlisle, they created an artistic thesis about the direct relationship between colonialism, capitalism, and food injustice. They also worked as a restoration intern for the Cheadle Center for Biodiversity and Ecological Restoration and as a summer research assistant to Bren PhD student Jason Maier, immersing themselves in Python without prior experience to analyze Food and Agriculture Organization data. After completing the MEDS program, Kaiju is committed to upholding the pillars of Indigenous data sovereignty and applying data science skills to solve problems that plague the food supply chain and perpetuate food and land injustice."
   },
   {
     "objectID": "delete_later/practice.html",
@@ -103,5 +103,26 @@
     "title": "Predictors of food security and affordability in California",
     "section": "Analysis Plan",
     "text": "Analysis Plan\n\nRandomization Hypothesis Test\n\nI conducted a randomization hypothesis test first because I wanted to avoid diving deeper into the relationship between CA region and food cost if there wasn’t one to explore in the first place\n\nNull Hypothesis (H0): Region does not have a significant effect on food cost.\nAlternative Hypothesis (H1): Region does have a significant effect on food cost.\n\nI repeated the randomization test for 4 different pairs of regions to ascertain that the relationship between food cost and region existed for all 5 regions, not just one.\n\n\n\n\n\nNull distribution of regions 3&4\n\n\nThe resulting p-value of every single randomization test was 0 or virtually 0, giving me strong evidence to reject the null hypothesis. Under the assumption that the null is true, it is very unlikely that the observed food cost data would occur by chance.\nHere’s my next footnote2\nI’m citing me(Csik 2022)"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-work",
+    "href": "about.html#what-i-do-for-work",
+    "title": "About",
+    "section": "",
+    "text": "Here is where I describe what I do profesisonally"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-fun",
+    "href": "about.html#what-i-do-for-fun",
+    "title": "About",
+    "section": "What I do for fun",
+    "text": "What I do for fun\nGive the people what they want"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources Page",
+    "section": "",
+    "text": "this is an h1 element with the title class\n\nthis paragraph is eerie-black\n\n\nthis text is justified\n\n\nthis text is both justified and eerie-black\n\n\nHere’s where I’m describing something fun that I that I enjoy doing\nHere’s a full line\n\nHere’s one line Here’s another line"
   }
 ]

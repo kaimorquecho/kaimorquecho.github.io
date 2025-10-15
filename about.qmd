@@ -2,7 +2,11 @@
 title: "About"
 ---
 
-About this site
+## What I do for work
 
-```         
-```
+Here is where I describe what I do profesisonally 
+
+## What I do for fun 
+
+Give the people what they want
+

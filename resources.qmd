@@ -1,3 +1,23 @@
 ---
 title: "Resources Page"
 --- 
+
+<h1 class="title">this is an h1 element with the title class</h>
+
+<p class="eerie-text">this paragraph is eerie-black</p>
+
+<p class="justify-text">this text is justified</p>
+
+<p class="justify-text eerie-text">this text is both justified and eerie-black</p>
+
+---
+
+Here's where I'm describing [something fun that I ]{.eerie-text} that I enjoy doing
+
+[Here's a full line]{.eerie-text}
+
+
+::: {.eerie-text}
+Here's one line
+Here's another line 
+:::

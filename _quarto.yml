@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "Kaiju Morquecho"
+  title: "Kaiju Morquecho Rubalcava"
   navbar:
     #title: true
     logo: lochie.png
@@ -15,11 +15,11 @@ website:
       - posts.qmd
   page-footer:
     background: light 
-    left: Copyright 2024, Kaiju Morquecho
+    left: Copyright 2025, Kaiju Morquecho Rubalcava
     right: This website is built with {{< fa brands github title="the octocat github icon">}}
 format:
   html:
     theme: styles.scss
-    mainfont: Courier Prime
-    toc: false
+    mainfont: Roboto Condensed
+    toc: true
     page-layout: full
