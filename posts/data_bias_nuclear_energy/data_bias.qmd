@@ -1,0 +1,10 @@
+---
+title: "A Data Bias Case Study: Nuclear Energy"
+description: ""
+author:
+  - name: Kaiju Morquecho Rubalcava
+    affiliation: MEDS Graduate Student
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds-program
+date: 2025-12-11
+---
+
