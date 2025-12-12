@@ -9,7 +9,7 @@
 <meta name="author" content="Kaiju Morquecho Rubalcava">
 <meta name="dcterms.date" content="2025-12-11">
 
-<title>A Data Bias Case Study: Nuclear Energy – Kaiju Morquecho Rubalcava</title>
+<title>A Data Bias Case Study: Nuclear Energy Risk Assessment – Kaiju Morquecho Rubalcava</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,7 +129,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">References</a></li>
+  <li><a href="#case-description" id="toc-case-description" class="nav-link active" data-scroll-target="#case-description">Case Description</a>
+  <ul class="collapse">
+  <li><a href="#industry-bias" id="toc-industry-bias" class="nav-link" data-scroll-target="#industry-bias">Industry Bias</a></li>
+  <li><a href="#measurement-bias" id="toc-measurement-bias" class="nav-link" data-scroll-target="#measurement-bias">Measurement Bias</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections">Reflections</a></li>
+  <li><a href="#solutions-reducing-bias-in-nuclear-risk-data" id="toc-solutions-reducing-bias-in-nuclear-risk-data" class="nav-link" data-scroll-target="#solutions-reducing-bias-in-nuclear-risk-data">Solutions: Reducing Bias in Nuclear Risk Data</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -138,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A Data Bias Case Study: Nuclear Energy</h1>
+<h1 class="title">A Data Bias Case Study: Nuclear Energy Risk Assessment</h1>
 </div>
 
 
@@ -176,33 +185,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<hr>
 <p>Ever since I was seven years old, I have been fascinated by nuclear accidents. At first, it was the eerie stillness of an abandoned city that captured my attention: Chernobyl. Later, it was Fukushima; this time not as history, but as something happening live. Watching the explosions on the news, I knew even then that what was unfolding would change Japan forever.</p>
 <p>While nuclear energy itself represents an extraordinary human achievement, it is the catastrophic scale of nuclear accidents that has captivated me. The consequences of severe nuclear failures stretch far beyond everyday experience, unfolding across generations, ecosystems, and political borders in ways that are almost impossible to comprehend.</p>
-<p>That fascination eventually led me to question not only how nuclear accidents occur, but how their risks are measured, classified, and communicated. These questions have become impossible to ignore as nuclear energy re-enters the spotlight. In the face of accelerating climate change, desperation has pushed societies back toward nuclear power as a solution to the global warming crisis we have created. When the stakes are this high, the way data are produced and interpreted matters profoundly. This blog post examines data bias in nuclear energy risk assessment, focusing on how institutional control over accident data and flawed measurement frameworks have systematically distorted our understanding of nuclear safety. Case Description: Data Bias in Nuclear Risk Assessment</p>
+<p>That fascination eventually led me to question not only how nuclear accidents occur, but how their risks are measured, classified, and communicated. These questions have become impossible to ignore as nuclear energy re-enters the spotlight. In the face of accelerating climate change, desperation has pushed societies back toward nuclear power as a solution to the global warming crisis we have created. When the stakes are this high, the way data are produced and interpreted matters profoundly. This blog post examines data bias in nuclear energy risk assessment, focusing on how institutional control over accident data and flawed measurement frameworks have systematically distorted our understanding of nuclear safety.</p>
+<hr>
+<section id="case-description" class="level1">
+<h1>Case Description</h1>
 <p>In environmental data science, bias refers to a systematic deviation from the truth. Rather than arising from random error, bias reflects predictable distortions embedded in how data are collected, measured, or interpreted (Konno et al., 2024). Biased estimates occur when an estimated effect consistently differs from the true effect due to structural problems within research or monitoring systems. In environmental contexts, this means data can appear raw and objective while still misrepresenting critical conditions.</p>
 <p>Data bias in nuclear energy is particularly concerning because nuclear systems operate on scales of power, complexity, and potential harm that lie beyond human control. Since the development of nuclear technology, our understanding of its risks has depended on the scenarios and failure modes humans are capable of imagining—and time and again, reality has exceeded those expectations. Over time, biased data practices have narrowed our perception of nuclear risk, creating an illusion of safety and control that does not match the scale of the underlying hazards.</p>
 <p>Drawing on Konno et al.’s (2024) framework, two forms of bias are especially relevant to nuclear energy risk assessment: industry or institutional bias and measurement bias.</p>
-<p>What data were collected, why, and by whom?</p>
 <p>Data on nuclear accidents are collected and maintained primarily by national regulatory agencies and international organizations responsible for overseeing nuclear energy, including industry-aligned institutions such as the International Atomic Energy Agency (IAEA). These datasets include records of nuclear incidents, classifications of accident severity, probabilistic safety analyses (PSAs), and summary statistics used to evaluate nuclear safety and justify regulatory decisions. One of the most widely used tools for communicating accident severity is the International Nuclear and Radiological Event Scale (INES).</p>
 <p>These data serve both technical and political purposes: they inform safety protocols while shaping public narratives about the predictability and acceptability of nuclear energy. As Welch (1980) documents, many risk estimates were produced in contexts where political support for nuclear expansion depended on maintaining public confidence in the technology’s safety.</p>
-<p>Industry / Institutional Bias</p>
+<section id="industry-bias" class="level2">
+<h2 class="anchored" data-anchor-id="industry-bias">Industry Bias</h2>
 <p>Industry or institutional bias occurs when organizations responsible for promoting or regulating a technology also control the data used to evaluate its risks. In nuclear energy, this bias arises because accident reporting systems and risk classifications are managed by institutions with strong incentives to minimize perceived danger.</p>
 <p>Welch’s (1980) analysis provides direct evidence of this bias. He documents how quantitative casualty estimates were removed from official reports, catastrophic accidents were labeled “incredible” by definition, and safety analyses were altered prior to public release to avoid undermining political support for nuclear power. These decisions were not driven by empirical uncertainty but by institutional pressures. By controlling what data were released and how risks were framed, industry-aligned institutions shaped public understanding while limiting democratic oversight (Welch, 1980).</p>
-<p>Measurement Bias</p>
+</section>
+<section id="measurement-bias" class="level2">
+<h2 class="anchored" data-anchor-id="measurement-bias">Measurement Bias</h2>
 <p>Measurement bias arises when the tools used to quantify a phenomenon systematically misrepresent its true magnitude or distribution (Konno et al., 2024). In nuclear risk assessment, this bias is most evident in the INES scale and in probabilistic safety analyses.</p>
 <p>Wheatley, Sovacool, and Sornette (2017) demonstrate that nuclear accidents follow a heavy-tailed distribution, meaning rare, catastrophic events dominate overall harm. Their analysis shows that major accidents such as Chernobyl and Fukushima would require severity ratings beyond the maximum INES level to accurately reflect their impacts. As a result, INES systematically underestimates the probability and consequences of extreme events.</p>
 <p>Further evidence comes from Rose and Sweeting (2016), who find no statistical evidence of a learning effect in nuclear safety over time. Despite decades of operation and repeated accidents, nuclear systems have not become demonstrably safer. This challenges assumptions embedded in PSAs, which are limited to imagined scenarios and are not designed to estimate absolute risk in tightly coupled systems prone to cascading failures (Rose &amp; Sweeting, 2016; Wheatley et al., 2017).</p>
-<p>Reflections</p>
+</section>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
 <p>Scholars of technological risk have long argued that nuclear accidents should not be understood as rare deviations from otherwise controllable systems. Charles Perrow’s theory of normal accidents reframes failures in complex, tightly coupled technologies—such as nuclear power plants—as inevitable rather than exceptional. In these systems, small failures can cascade rapidly, outpacing human prediction and intervention (as discussed in Welch, 1980). From this perspective, nuclear accidents are expected outcomes of operating technologies whose complexity exceeds our capacity for full control.</p>
 <p>This framing makes data bias especially dangerous. If serious accidents are inherent features of nuclear systems, then data practices that minimize uncertainty, compress severity, or treat catastrophic failures as implausible outliers actively undermine preparedness. This danger became strikingly clear during the 2022 Russian invasion of Ukraine, when military activity damaged containment structures at the Chernobyl site. No simulation test or regulatory framework had incorporated the possibility of full-scale war surrounding a nuclear disaster site. Military conflict fell outside the boundaries of “imaginable” failure scenarios—and therefore outside formal risk assessments. Yet it happened.</p>
 <p>Nuclear risk is not confined to technical malfunction. It is entangled with geopolitical instability, human conflict, and conditions that resist quantification. When biased data reinforce the illusion of control, society is left making decisions based on a profoundly incomplete understanding of reality.</p>
-<p>Solutions: Reducing Bias in Nuclear Risk Data</p>
+</section>
+<section id="solutions-reducing-bias-in-nuclear-risk-data" class="level2">
+<h2 class="anchored" data-anchor-id="solutions-reducing-bias-in-nuclear-risk-data">Solutions: Reducing Bias in Nuclear Risk Data</h2>
 <p>Addressing data bias in nuclear energy requires structural, institutional, and methodological reform. Because nuclear systems will always exceed our capacity for complete control, solutions must focus on transparency, independence, and honest representation of uncertainty.</p>
 <p>First, institutional separation between nuclear promotion and risk data governance is essential. Welch (1980) shows that allowing industry-aligned agencies to control accident reporting creates incentives to suppress or sanitize information. Independent, international oversight bodies should be responsible for maintaining accident databases and reviewing risk assessments.</p>
 <p>Second, measurement frameworks must move beyond the INES scale. While INES may function as a communication tool, it should be supplemented—or replaced—by quantitative, reproducible metrics based on radiation release, economic damage, environmental contamination, and long-term health impacts (Wheatley et al., 2017). Risk assessments must explicitly account for heavy-tailed distributions and worst-case scenarios rather than treating catastrophic events as anomalies.</p>
 <p>Finally, insights from the Environmental Data &amp; Governance Initiative highlight the importance of public-interest data stewardship. EDGI argues that environmental data governance is inherently political and that public risk data cannot be trusted to institutions whose priorities conflict with transparency and justice (Nost et al., 2025). Archiving nuclear risk data with full context, metadata, and documentation of uncertainty would support democratic oversight and reduce the quiet erosion of public knowledge.</p>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<hr>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
 <ol type="1">
 <li><p>Konno, K., Gibbons, J., Lewis, R., &amp; Pullin, A. S. (2024). Potential types of bias when estimating causal effects in environmental research and how to interpret them. Environmental Evidence, 13(1), Article 1. https://doi.org/10.1186/s13750-024-00324-7</p></li>
 <li><p>Nost, E., Gehrke, G., Vera, L., &amp; Hansen, S. (2025). Why the Environmental Data &amp; Governance Initiative is archiving public environmental data. Patterns, 6(1), Article 101151. https://doi.org/10.1016/j.patter.2024.101151</p></li>
@@ -212,6 +232,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
